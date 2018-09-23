@@ -1,1 +1,4 @@
 appengine/lib/**
+functions/node_modules
+functions/lib
+functions/src/twitter_credentials.ts
