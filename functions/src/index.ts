@@ -20,7 +20,19 @@ export const tweet = functions.pubsub
   .topic('daily-tick')
   .onPublish(async event => {
     try {
-      const text = '週末限定フリーランスエンジニアやっています。日頃のちょっとした「エンジニアに解決を頼んでみたい」課題などありましたら、お気軽にご連絡ください！ホームページはこちら→https://peraichi.com/landing_pages/view/t1work (関係ないけど麻雀のメンツの埋め合わせもやります)'
+      const text = '【定期】現在Aidemyでは組織拡大に伴い全職種でフルタイムメンバーを募集しております！また、AIに詳しいエンジニアさんで副業したいという方も募集中です！フルタイム・副業問わずAidemyで働きたいという方は是非連絡ください！'
+      const client = new Twitter(twitter_credentials);
+      await client.post('statuses/update', {status: text});
+    } catch (error) {
+      throw error;
+    }
+  });
+
+  export const tweet2 = functions.pubsub
+  .topic('daily-tick2')
+  .onPublish(async event => {
+    try {
+      const text = '【定期】副業でフリーランスやってます！Node,js+Typescriptをはじめとしたjavascriptのバックエンド案件などを一番得意としています。もちろんそれ以外も色々できますので、エンジニアが必要でしたらお声がけください！'
       const client = new Twitter(twitter_credentials);
       await client.post('statuses/update', {status: text});
     } catch (error) {
