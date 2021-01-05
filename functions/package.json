@@ -9,7 +9,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "es6-promise": "^4.2.4",
     "eslint": "^5.2.0",
     "firebase-admin": "~5.13.0",
